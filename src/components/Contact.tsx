@@ -176,13 +176,76 @@ export default function Contact() {
                         </div>
 
                         {/* Social Links Row */}
-                        <div className="grid grid-cols-1 gap-6 text-center">
-                            <a href="https://www.linkedin.com/in/cibhiadhinath/" target="_blank" rel="noopener noreferrer" className="bg-[#111111] border border-white/[0.08] rounded-3xl p-6 flex flex-col items-center justify-center gap-4 hover:border-white/[0.2] hover:bg-white/[0.02] hover:-translate-y-1 transition-all duration-500 group">
-                                <svg className="w-7 h-7 text-muted group-hover:text-blue-500 transition-colors" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                </svg>
-                                <span className="text-[13px] font-mono tracking-widest uppercase text-muted group-hover:text-white transition-colors">LinkedIn</span>
-                            </a>
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            {[
+                                {
+                                    name: "LinkedIn",
+                                    url: "https://www.linkedin.com/in/cibhiadhinath/",
+                                    color: "hover:text-blue-500",
+                                    icon: (
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                        </svg>
+                                    )
+                                },
+                                {
+                                    name: "Instagram",
+                                    url: "https://www.instagram.com/cibhiadhinath/",
+                                    color: "hover:text-pink-500",
+                                    icon: (
+                                        <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                                        </svg>
+                                    )
+                                },
+                                {
+                                    name: "Pinterest",
+                                    url: "https://in.pinterest.com/cibhiadhinath/",
+                                    color: "hover:text-red-500",
+                                    icon: (
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.965 1.406-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.261 7.929-7.261 4.162 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z" />
+                                        </svg>
+                                    )
+                                },
+                                {
+                                    name: "Spotify",
+                                    url: "https://open.spotify.com/user/31rrhnogpr2nyrpyiahevz6xzm5i?si=MwBlN-m5SXmsWoxrSXpaVw",
+                                    color: "hover:text-green-500",
+                                    icon: (
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.62-1.08 8.52-.66 11.64 1.26.3-.18.42.24.3.54v.541zm1.5-3.119c-.3.48-.961.66-1.44.3-3.24-1.98-8.221-2.58-12.061-1.381-.54.18-1.141-.12-1.321-.6-.18-.54.12-1.141.6-1.321 4.38-1.32 9.9-0.6 13.62 1.68.48.3.66.96.3 1.441l-.18.12-1.5-.24zm.12-3.24c-3.9-2.341-10.322-2.521-14.102-1.381-.6.18-1.261-.18-1.44-.78-.18-.6.18-1.261.78-1.441 4.32-1.321 11.4-1.019 15.961 1.681.54.3.72 1.02.42 1.56-.3.54-1.02.72-1.56.42l-.06-.06z" />
+                                        </svg>
+                                    )
+                                },
+                                {
+                                    name: "SoundCloud",
+                                    url: "https://on.soundcloud.com/HZJ2VooKNxneraibA",
+                                    color: "hover:text-orange-500",
+                                    icon: (
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M1.2 13.2h.4v3.1h-.4v-3.1zm1.4.1h.4v2.7h-.4v-2.7zm1.3-.8h.5v3.6h-.5v-3.6zm1.4-1h.4v4.6h-.4v-4.6zm1.4.7h.4v3.9h-.4v-3.9zm1.4-1.5h.4v5.4h-.4v-5.4zm1.4 1h.4V17h-.4v-4.1zm1.4-1h.4v5.1h-.4V11.9zm1.4 1h.4v4.1h-.4v-4.1zm1.4-1h.4v5.1h-.4V11.9zm1.4 1h.4v4.1h-.4v-4.1zm1.4-1h.4v5.1h-.4V11.9zm1.4-.7h.5v4.8h-.5v-4.8zm1.4-.5h.4v5.3h-.4v-5.3zm1.4.5h.4v4.8h-.4v-4.8zm1.4 0h.4v4.8h-.4v-4.8zm1.4-.2h.4v5h-.4v-5zm1.4-1h.4v6h-.4v-6zm1.4-1h.4v7h-.4v-7zm1.5-.5h2.2c1.7 0 3.3.4 4.5 1.1s2 1.8 2.1 3c1.7 0 3 1.3 3 2.9s-1.3 3-3 3h-8.8V10.4z" />
+                                        </svg>
+                                    )
+                                }
+                            ].map((social) => (
+                                <a
+                                    key={social.name}
+                                    href={social.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="bg-[#111111] border border-white/[0.08] rounded-3xl p-5 flex flex-col items-center justify-center gap-3 hover:border-white/[0.2] hover:bg-white/[0.02] hover:-translate-y-1 transition-all duration-500 group"
+                                >
+                                    <div className={`text-muted transition-colors duration-300 ${social.color}`}>
+                                        {social.icon}
+                                    </div>
+                                    <span className="text-[10px] font-mono tracking-widest uppercase text-muted group-hover:text-white transition-colors">
+                                        {social.name}
+                                    </span>
+                                </a>
+                            ))}
                         </div>
                     </FadeInView>
                 </div>

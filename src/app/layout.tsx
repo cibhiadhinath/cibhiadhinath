@@ -56,21 +56,7 @@ export default function RootLayout({
           src="https://assets.calendly.com/assets/external/widget.js"
           strategy="afterInteractive"
         />
-        <Script id="calendly-badge-init" strategy="afterInteractive">
-          {`
-            window.onload = function() {
-              if (window.Calendly) {
-                Calendly.initBadgeWidget({
-                  url: 'https://calendly.com/cibhi-unbound3d/30min',
-                  text: 'Schedule time with me',
-                  color: '#0069ff',
-                  textColor: '#ffffff',
-                  branding: true
-                });
-              }
-            }
-          `}
-        </Script>
+
       </body>
     </html>
   );
