@@ -26,7 +26,12 @@ export default function Hero() {
                                 </span>
                             </div>
                             <div className="flex items-center gap-3">
-                                <div className="flex h-6 items-center px-3 rounded-full bg-electric-blue/[0.08] border border-electric-blue/20">
+                                <a
+                                    href="https://unbound3d.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex h-6 items-center px-3 rounded-full bg-electric-blue/[0.08] border border-electric-blue/20 hover:bg-electric-blue/20 transition-all duration-300 group/badge"
+                                >
                                     <span className="relative flex h-2 w-2 mr-2">
                                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-electric-blue opacity-50"></span>
                                         <span className="relative inline-flex rounded-full h-2 w-2 bg-electric-blue shadow-[0_0_8px_rgba(0,194,255,0.8)]"></span>
@@ -34,7 +39,7 @@ export default function Hero() {
                                     <span className="text-electric-blue text-[10px] font-mono tracking-widest uppercase">
                                         Unbound3D
                                     </span>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </FadeInView>

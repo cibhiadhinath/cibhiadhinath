@@ -13,7 +13,7 @@ export default function Footer() {
                                 Cibhi Adhinath Padmanaban
                             </span>
                             <span className="text-muted/50 text-[11px] tracking-wide leading-tight mt-1">
-                                Co-Founder, Unbound3D — Hardware Manufacturing & Execution Support
+                                Co-Founder, <a href="https://unbound3d.com" target="_blank" rel="noopener noreferrer" className="text-electric-blue/70 hover:text-electric-blue transition-colors">Unbound3D</a> — Hardware Manufacturing & Execution Support
                             </span>
                         </div>
                     </div>
@@ -46,10 +46,10 @@ export default function Footer() {
                                     href={social.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-muted/40 hover:text-electric-blue transition-colors duration-300"
+                                    className="text-muted/60 hover:text-electric-blue transition-colors duration-300"
                                     aria-label={social.name}
                                 >
-                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                         {social.icon}
                                     </svg>
                                 </a>
